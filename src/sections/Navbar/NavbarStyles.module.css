@@ -1,0 +1,198 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 0.7;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  max-width: 70px; 
+  height: auto;
+}
+
+.searchBox {
+  flex: 2; 
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchForm input {
+  padding: 15px;
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 45px;
+  outline: none;
+  height: 100%;
+  font-size: 18px;
+  flex: 1; 
+}
+
+.searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;  
+  margin-left: 40px;
+}
+
+.searchButton {
+  background: var(--btn-bg-color, #79CDCD); /* Nền màu mặc định, bạn có thể điều chỉnh var(--btn-bg-color) nếu có */
+  border: 2px solid #9b9797; /* Viền màu xám nhạt */
+  height: 50px;
+  align-items: center;
+  flex: 1;
+  border-radius: 50%; /* Làm cho nút trở nên hình tròn */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.lightTheme.searchButton {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.darkTheme.searchButton {
+  background: var(--bg-color); 
+  border-color: #444; 
+  color: var(--text-color);
+}
+
+.lightTheme .searchButton:hover {
+  background: #7ecdcd;
+  border-color: #aaa; 
+}
+
+.darkTheme .searchButton:hover {
+  background: #ff6347;
+  border-color: #444  ;
+}
+
+
+.searchButton img {
+  width: 20px;
+  height: 20px;
+}
+
+.emptySpace {
+  flex: 1;
+}
+
+.navLinks {
+  flex: 5; 
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  flex: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.lightTheme .navLinks li a:hover {
+  color: #8B8970;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  background-color: #79CDCD;
+}
+
+.darkTheme .navLinks li a:hover {
+  color: #ff6347;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  background-color: #000;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  max-width: 50px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle {
+  transform: rotate(45deg);
+}
+
+.line2.toggle {
+  opacity: 0;
+}
+
+.line3.toggle {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navLinks {
+      display: none;
+  }
+
+  .navActive {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background-color: var(--bg-color);
+      transition: transform 0.5s ease;
+  }
+
+  .burger {
+      display: block;
+  }
+}

@@ -25,7 +25,12 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
+    padding: 0; /* Loại bỏ padding mặc định */
+    box-sizing: border-box;
 }
+.background {
+    transition: background-image 0.5s ease-in-out;
+  }
 
 #root {
     display: flex;
@@ -107,4 +112,8 @@ p {
             margin-bottom: 75px;
         }
     }
+    html {
+        scroll-behavior: smooth;
+      }
+      
 }
