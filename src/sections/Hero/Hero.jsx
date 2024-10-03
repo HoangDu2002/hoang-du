@@ -41,7 +41,6 @@ function Hero() {
        </div>
        <div className={styles.info}>
          <h1>Trịnh Lê
-           <br />
            Hoàng Dũ
          </h1>
          <h2>Developer Intern</h2>
