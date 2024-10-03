@@ -63,7 +63,7 @@ function Hero() {
            </a>
          </span>
          <p className={styles.description}>
-           Portfolio Website xây dựng dựa trên kham khảo và được thực hiện bởi Hoàng Dũ sử dụng Tool chính là React ,HTML và CSS
+           Portfolio Website xây dựng dựa trên kham khảo và được thực hiện bởi Hoàng Dũ sử dụng Tool chính là React + Vite với ngôn ngữ HTML/CSS và Javascript
          </p>
          <a href={CV}>
            <button className="hover" download>
