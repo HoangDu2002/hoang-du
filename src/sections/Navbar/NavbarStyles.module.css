@@ -62,12 +62,12 @@
 }
 
 .searchButton {
-  background: var(--btn-bg-color, #79CDCD); /* Nền màu mặc định, bạn có thể điều chỉnh var(--btn-bg-color) nếu có */
-  border: 2px solid #9b9797; /* Viền màu xám nhạt */
+  background: var(--btn-bg-color, #79CDCD);
+  border: 2px solid #9b9797; 
   height: 50px;
   align-items: center;
   flex: 1;
-  border-radius: 50%; /* Làm cho nút trở nên hình tròn */
+  border-radius: 50%; 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -171,6 +171,10 @@
 }
 
 @media (max-width: 800px) {
+  .logoImage {
+    height: auto;
+    
+  }
   .navbar {
       flex-direction: column;
       align-items: flex-start;
@@ -191,8 +195,59 @@
       background-color: var(--bg-color);
       transition: transform 0.5s ease;
   }
-
   .burger {
       display: block;
   }
+  @media (max-width: 500px) {
+    .header {
+      height: 80px;
+      margin-top: 0;
+      padding: 0 10px;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .logoImage {
+      margin-top: 0;
+      width: 100%;
+    }
+    .navbar {
+      margin-top: 0;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .searchBox {
+      height: 80px;
+      width: 330px;
+    }
+    .searchButton {
+      width:100% ;
+      margin-top: 10px;
+      height: 30px;
+    }
+    .searchButton img {
+      width: 15px;
+      height: 15px;
+    }
+    .navLinks {
+     display: none;
+    }
+
+.navActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    transition: transform 0.5s ease;
+}
+  
+    .burger {
+      max-width: 40px;
+      flex-shrink: 0; 
+      align-items: flex-end;
+    }
+  }  
 }

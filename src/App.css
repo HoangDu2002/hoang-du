@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
-    padding: 0; /* Loại bỏ padding mặc định */
+    padding: 0; 
     box-sizing: border-box;
 }
 .background {

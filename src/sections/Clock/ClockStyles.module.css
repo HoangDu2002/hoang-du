@@ -1,4 +1,4 @@
-/* Cấu hình mặc định cho màn hình lớn */
+
 .clockContainer {
     position: fixed;
     bottom: 20px;
@@ -17,36 +17,48 @@
   }
   
   .timeDisplay {
-    font-size: 2rem; /* Kích thước chữ mặc định */
+    font-size: 2rem; 
     font-family: 'Courier New', Courier, monospace;
     color: var(--text-color);
   }
   
-  /* Responsive: Thu nhỏ kích thước khi màn hình nhỏ hơn 600px */
+
   @media (max-width: 600px) {
     .clockContainer {
-      height: 60px; /* Giảm độ cao */
-      bottom: 10px; /* Giảm khoảng cách cách mép dưới */
-      right: 10px;  /* Giảm khoảng cách cách mép phải */
+      height: 60px; 
+      bottom: 10px; 
+      right: 10px; 
       padding: 8px;
     }
   
     .timeDisplay {
-      font-size: 1rem; /* Giảm kích thước chữ */
+      font-size: 1rem; 
     }
   }
   
-  /* Responsive: Thu nhỏ kích thước khi màn hình nhỏ hơn 400px */
+ 
   @media (max-width: 400px) {
     .clockContainer {
-      height: 40px; /* Giảm độ cao hơn nữa */
+      height: 40px; 
       bottom: 5px;
       right: 5px;
       padding: 5px;
     }
   
     .timeDisplay {
-      font-size: 0.5rem; /* Giảm kích thước chữ thêm */
+      font-size: 0.5rem; 
+    }
+  }
+  @media (max-width: 200px) {
+    .clockContainer {
+      height: 20px; 
+      bottom: 1px;
+      right: 1px;
+      padding: 1px;
+    }
+  
+    .timeDisplay {
+      font-size: 1rem; 
     }
   }
   
